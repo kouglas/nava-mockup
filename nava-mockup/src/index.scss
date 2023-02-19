@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+/* Define standard variables and values for website */
+$bgcolor: #1a4480;
+$buttoncolor: #005EA2;
+$navtextcolor: #fff;
+// $fontsize: 18px;
+
+* {
+  // margin-top: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Navbar */ 
+nav {
+  background-color: $bgcolor;
+  color: $navtextcolor;
+  height: 6.25em;
+}
+
+.nav-title {
+  margin-left: 1.5em;
+  padding-top: 1em;
+  font-size: 1.875em;
+  font-weight: 900;
+}
+
+/* Info */ 
+
+.main-info {
+  margin: 3em;
+}
+
+.text-info {
+  padding-top: 1.2em;
+  font-size: 1.2em;
+}
+
+.main-title {
+  font-size: 1.875em;
+}
+
+/* Add Member Cards */ 
+
+.family-members {
+  display: flex;
+  margin-top: 1em;
+  margin-left: -.75em;
+}
+
+.member-card {
+  margin: .75em;
+  flex: 1;
+  padding: 2em;
+  line-height: 2.5em;
+  border: .125em solid lightgray;
+  max-width: fit-content;
+  border-radius: .375em;
+}
+
+/* Button */ 
+
+button {
+  background-color: $buttoncolor;
+  border: 1px solid $buttoncolor;
+  margin-top: -1em;
+  margin-right: 8px;
+  margin-bottom: 0px;
+  margin-left: 2.3em;
+  padding: 16px 24px;
+  color: $navtextcolor;
+  font-size: 1.33em;
+  font-weight: 700;
+  border-radius: 4px;
+}

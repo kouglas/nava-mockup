@@ -1,0 +1,17 @@
+{
+    "member": [
+        {
+            "name": "Alphonse Babolli",
+            "description": "Household contact",
+            "fruit": "Mango",
+            "id": 1
+
+        },
+        {
+            "name": "Roscoe Dog",
+            "description": "Household contact",
+            "fruit": "Kiwi",
+            "id": 2
+        }
+    ]
+}
