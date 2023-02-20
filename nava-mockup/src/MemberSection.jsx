@@ -1,25 +1,14 @@
-import { useState } from "react";
 
-
-const MemberSection = () => {
-
-    const [members, setMembers] = useState([
-        {name:"Alphonse Babolli", description: "Household contact", fruit: "Mango", id: 1,},   
-        {name: "Roscoe Dog", description: "Household contact", fruit: "Kiwi", id: 2,}
-        
-    ])
-
-// state and functions here
+const MemberSection = ({ members }) => {
 
     return ( 
         <>
         <div className="family-members">
             {members.map((member) => (
-                <div className="member-card" key={members.id}>
+                <div className="member-card" key={ member.id }>
                     <h3>{ member.name }</h3>
-                    <p><strong>Description: </strong>{member.description}</p>
-                    <p><strong>Fruit: </strong>{member.fruit}</p>
-
+                    <p><strong>Description: </strong>{ member.description }</p>
+                    <p><strong>Fruit: </strong>{ member.fruit }</p>
                 </div>
                 
 

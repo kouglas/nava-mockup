@@ -1,7 +1,31 @@
+import { useEffect, useState } from "react";
 import MemberSection from "./MemberSection";
-import Navbar from "./Navbar";
 
 const Info = () => {
+  const [members, setMembers] = useState(null)
+  const [isPending, setIsPending] = useState(true)
+  const [ error, setError] = useState(null)
+
+  useEffect(() => {
+    fetch('http://localhost:8000/member')
+      .then(response => {
+        if(!response.ok) {
+          throw Error('could not fetch the data for that resource')
+        }
+          return response.json()
+      })
+      .then(data => {
+          console.log(data)
+          setMembers(data)
+          setIsPending(false)
+          setError(null)
+      })
+      .catch(err => {
+        setIsPending(false)
+        setError(err.message)
+      })
+}, [])
+
     return ( 
         <>
           <section> 
@@ -14,7 +38,10 @@ const Info = () => {
               </p>
               {/* put the MemberSection component here */}
 
-              <MemberSection />
+              {error && <div>{ error } </div>}
+              {isPending && <div>Loading...</div>}
+              {members && <MemberSection members={members}  />} 
+              {/* render when we have members data */}
 
             </div>
             

@@ -12,6 +12,12 @@
             "description": "Household contact",
             "fruit": "Kiwi",
             "id": 2
+        },
+        {
+            "name": "Harvard Cat",
+            "description": "Household contact",
+            "fruit": "Pineapple",
+            "id": 3
         }
     ]
 }
