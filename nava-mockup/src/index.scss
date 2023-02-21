@@ -5,10 +5,9 @@
 $bgcolor: #1a4480;
 $buttoncolor: #005EA2;
 $navtextcolor: #fff;
-// $fontsize: 18px;
+$breakpoint-small: 700px;
 
 * {
-  // margin-top: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -74,4 +73,50 @@ button {
   font-size: 1.33em;
   font-weight: 700;
   border-radius: 4px;
+}
+.submit, .submit-btn {
+  min-width: fit-content;
+  margin-top: 1em;
+  margin-left: 2em;
+
+}
+
+/* Form */ 
+
+form {
+  max-width: 60%;
+  margin-left: 3em;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+/* Media Queries / Mix-ins */ 
+
+@mixin min-width($breakpoint){
+  @if ($breakpoint == small) {
+    @media (max-width: #{$breakpoint-small - 1}){
+      @content;
+    }
+  }
+}
+
+.family-members {
+  @include min-width(small) {
+    display: block;
+    margin-left: 1em;
+  }
+}
+
+.add-btn {
+  @include min-width(small) {
+    display: block;
+    margin-left: 4.5em;
+  }
 }

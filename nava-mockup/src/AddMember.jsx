@@ -16,7 +16,10 @@ const AddMember = () => {
 
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
+    // ao if you keep it like this
+    // you can add new members but the page will still refresh
+    // after you submit 
 
     const member = { name, description, fruit }
 
@@ -40,13 +43,13 @@ const AddMember = () => {
             <div className="submit">
               <form onSubmit={handleSubmit}>
               <label>
-                Family Member Name: <input type="text" required value={name} onChange= {(e) => setName(e.target.value) }  />
+                <strong>Family Member Name: </strong> <input type="text" required value={name} onChange= {(e) => setName(e.target.value) }  />
               </label>
               <label>
-                Family Member Description: <input type="text" required value={description} onChange= {(e) => setDescription(e.target.value) } />
+                <strong>Family Member Description:</strong> <input type="text" required value={description} onChange= {(e) => setDescription(e.target.value) } />
               </label>
               <label>
-                Family Favorite Fruit: <input type="text" required value={fruit} onChange= {(e) => setFruit(e.target.value) } />
+                <strong>Family Favorite Fruit:</strong> <input type="text" required value={fruit} onChange= {(e) => setFruit(e.target.value) } />
               </label>
               <button className="submit-btn">Add new member</button>  
             </form>

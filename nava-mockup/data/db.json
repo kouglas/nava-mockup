@@ -17,30 +17,6 @@
       "description": "Household contact",
       "fruit": "Pineapple",
       "id": 3
-    },
-    {
-      "name": "acdasdaa",
-      "description": "sdadsadsad",
-      "fruit": "asddsadadad",
-      "id": 4
-    },
-    {
-      "name": "acdasdaa",
-      "description": "sdadsadsad",
-      "fruit": "asddsadadad",
-      "id": 5
-    },
-    {
-      "name": "sasaa",
-      "description": "sasasasasaasa",
-      "fruit": "asdsdsaaadada",
-      "id": 6
-    },
-    {
-      "name": "sasaa",
-      "description": "sasasasasaasa",
-      "fruit": "asdsdsaaadada",
-      "id": 7
     }
   ]
 }
