@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import AddMember from './AddMember'
-import './App.css'
 import Info from './Info'
 import Navbar from './Navbar'
 
